@@ -1,0 +1,173 @@
+html {
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #24272e;
+  color: white;
+  font-family: "Roboto";
+
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.2s ease-in-out;
+  opacity: 0;
+}
+
+body.fade-in {
+  opacity: 1;
+}
+
+body.fade-out {
+  opacity: 0;
+}
+
+header {
+  background: #fff;
+  padding: 20px;
+  box-shadow: 0px 0px 100px rgb(230, 230, 230);
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-button {
+  background-color: #444;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-size: 16px;
+}
+
+.header-button:hover {
+  background-color: #333;
+  transform: scale(1.05);
+}
+
+.header-button:active {
+  background-color: #555;
+  transform: scale(0.95);
+}
+
+header h1 {
+  color: #444;
+  text-align: center;
+  font-weight: 100;
+}
+
+.score_board {
+  border: 3px solid #fff;
+  width: 350px;
+  margin: 100px auto;
+  font-size: 36px;
+  border-radius: 8px;
+  text-align: center;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.choices {
+  display: flex;
+  justify-content: center;
+  margin: 30px;
+}
+
+.choice img {
+  width: 100px;
+  height: 100px;
+  margin: 5px 20px;
+  transition: opacity 0.3s ease;
+}
+
+.choice img:hover {
+  opacity: 0.7;
+}
+
+.result {
+  text-align: center;
+  margin-top: 20px;
+  font-size: larger;
+}
+
+#user_score,
+#computer_score {
+  display: inline-block;
+  min-width: 50px;
+}
+
+#action_message {
+  text-align: center;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+@keyframes flash-red {
+  0% {
+    background-color: red;
+  }
+  50% {
+    background-color: #24272e;
+  }
+  100% {
+    background-color: #24272e;
+  }
+}
+
+@keyframes flash-green {
+  0% {
+    background-color: green;
+  }
+  50% {
+    background-color: #24272e;
+  }
+  100% {
+    background-color: #24272e;
+  }
+}
+
+@keyframes flash-blue {
+  0% {
+    background-color: #2196f3;
+  }
+  50% {
+    background-color: #24272e;
+  }
+  100% {
+    background-color: #24272e;
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-10px);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  75% {
+    transform: translateX(-10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
